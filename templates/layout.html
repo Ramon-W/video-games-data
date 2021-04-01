@@ -14,8 +14,8 @@
           <a class="navbar-brand" href="#">Broadway Data</a>
         </div>
         <ul class="nav navbar-nav">
-          <li {% if active_page == "home" %} class="active"{% endif %}><a href="#">Home</a></li>
-          <li {% if active_page == "popular" %} class="active"{% endif %}><a href="popular">Most Popular Video Games</a></li>
+          <li {% if page == "home" %} class="active" {% endif %}><a href="#">Home</a></li>
+          <li {% if page == "popular" %} class="active" {% endif %}><a href="popular">Most Popular Video Games</a></li>
         </ul>
       </div>
     </nav>
