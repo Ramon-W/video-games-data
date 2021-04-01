@@ -1,3 +1,6 @@
+body {
+  background-image: url("back.png");
+}
 .paragraph {
   width: 50%;
   margin-left: 10px;
