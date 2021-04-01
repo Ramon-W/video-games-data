@@ -10,5 +10,5 @@ def render_home():
 
 @app.route('/popular')
 def render_popular():
-    with open('broadway.json') as video_game:
+    with open('video_games.json') as video_game:
         game = json.load(video_game)
