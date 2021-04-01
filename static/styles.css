@@ -1,1 +1,7 @@
-
+body {
+  background-color: #F5F5F5;
+}
+.about {
+  width: 50%;
+  margin-left: 10px;
+}
