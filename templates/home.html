@@ -4,16 +4,16 @@
 {% block content %}
 <div class="about">
   <h1>About:</h1>
-    <p>
-      This webapp contains video game data from <a href="https://corgis-edu.github.io/corgis/json/video_games/">The CORGIS Data Set Project</a>, containing 
-      1212 titles from the year 2004 to 2009. It includes the general information about each video game like its publisher, sales, and review scores.<br><br>
+  <p>
+    This webapp contains video game data from <a href="https://corgis-edu.github.io/corgis/json/video_games/">The CORGIS Data Set Project</a>, containing 
+    1212 titles from the year 2004 to 2009. It includes the general information about each video game like its publisher, sales, and review scores.<br><br>
+    
+    One set of statistics for each video game is the playtime, crowdsourced from <a href="https://howlongtobeat.com">HowLongToBeat.com</a>. This includes the average 
+    length (in hours) of all playstyles, as well as their averages. If a playstyle for a game does not exist (e.g. completionists), then it is denoted as 0.
+    Additionally, if the game does not have a specific end or there is no sufficient data, it would also be denoted as 0.<br><br>
       
-      One set of statistics for each video game is the playtime, crowdsourced from <a href="https://howlongtobeat.com">HowLongToBeat.com</a>. This includes the average 
-      length (in hours) of all playstyles, as well as their averages. If a playstyle for a game does not exist (e.g. completionists), then it is denoted as 0.
-      Additionally, if the game does not have a specific end or there is no sufficient data, it would also be denoted as 0.<br><br>
-        
-      Publisher may be left blank if the publisher of the video game is unknown. Ratings are from <a href="https://www.xbox.com/en-US/games/gameratings">ESRB</a>,
-      but only includes E, T, and M. The review scores (out of 100) are from <a href="https://www.metacritic.com">Metacritic</a>.
-      </p>
-    </div>
+    Publisher may be left blank if the publisher of the video game is unknown. Ratings are from <a href="https://www.xbox.com/en-US/games/gameratings">ESRB</a>,
+    but only includes E, T, and M. The review scores (out of 100) are from <a href="https://www.metacritic.com">Metacritic</a>.
+   </p>
+</div>
 {% endblock %}
