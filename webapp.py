@@ -7,3 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def render_home():
     return render_template('home.html')
+
+@app.route('/popular')
+def render_popular():
+    return render_template('popular.html')
