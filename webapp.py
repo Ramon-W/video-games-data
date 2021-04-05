@@ -10,4 +10,6 @@ def render_home():
 
 @app.route('/popular')
 def render_popular():
+    with open('video_games.json') as game_data:
+        videoGames = json.load(game_data)
     return render_template('popular.html')
