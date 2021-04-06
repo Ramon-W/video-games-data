@@ -12,4 +12,5 @@ def render_home():
 def render_popular():
     with open('video_games.json') as game_data:
         videoGames = json.load(game_data)
+    year = request.args['year']
     return render_template('popular.html')
