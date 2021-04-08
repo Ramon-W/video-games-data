@@ -12,8 +12,8 @@ def render_home():
 def render_popular():
     with open('video_games.json') as game_data:
         videoGames = json.load(game_data)
-    if 'Year' in request.args:
-        year = request.args['Year']
+    if 'year' in request.args:
+        year = request.args['year']
         highestSalesName = highest_sales(videoGames, year, "title")
         highestSales = highest_sales(videoGames, year, "profit")
         highestScore = highest_score(videoGames, year)
