@@ -24,13 +24,14 @@ def highest_sales(videoGames, year, version):
     highestSold = videoGames[0]
     highestSoldName = ""
     for game in videoGames:
-        if game["Release"]["Year"] == year and game["Metrics"]["Sales"] > highestSold:
+        if game["Release"]["Year"] == year and game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
             highestSold = game
     if version == "title":
         return highestSold["Title"]
     elif version == "profit":
         profit = highestSold["Metrics"]["Sales"] * 1000000000
         return profits
+    return "?"
     
 def highest_score(videoGames, year):
     return "hi"
