@@ -28,7 +28,7 @@ def highest_sales(videoGames, year, version):
             highestSold = game
     if version == "title":
         return highestSold["Title"]
-    else:
+    elif version == "profit":
         profit = highestSold["Metrics"]["Sales"] * 1000000000
         return profits
     
