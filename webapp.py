@@ -24,12 +24,12 @@ def highest_sales(videoGames, year, version):
     highestSold = videoGames[0]
     highestSoldName = ""
     for game in videoGames:
-        if game["Release"]["Year"] == year and game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
+        if (game["Release"]["Year"] == year) and (game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]):
             highestSold = game
     if version == "title":
         return highestSold["Title"]
     else:
-        profits = highestSold["Metrics"]["Sales"] * 1000000000
+        profits = highestSold["Metrics"]["Sales"]
         return profits
 
     
