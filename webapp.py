@@ -12,11 +12,13 @@ def render_home():
 def render_popular():
     with open('video_games.json') as game_data:
         videoGames = json.load(game_data)
-    year = request.args['Year']
-    highestSalesName = highest_sales(videoGames, year, title)
-    highestSales = highest_sales(videoGames, year, profit)
-    highestScore = highest_score(videoGames, year)
-    return render_template('populardata.html', highestSalesName = highestSalesName, highestSales = highestSales, highestScore = highestScore, year = year)
+    if 'year' in request.args:
+        year = request.args['Year']
+        highestSalesName = highest_sales(videoGames, year, title)
+        highestSales = highest_sales(videoGames, year, profit)
+        highestScore = highest_score(videoGames, year)
+        return render_template('populardata.html', highestSalesName = highestSalesName, highestSales = highestSales, highestScore = highestScore, year = year)
+    return render_template('popular.html')
 
 def highest_sales(videoGames, year, version):
     highestSold = videoGames[0]
