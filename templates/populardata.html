@@ -1,5 +1,5 @@
 {% extends "popular.html" %}
 {% block content %}
 {{ super() }}
-<p> {{ highestSalesName }} {{ highestSales }} {{ highestScore }} {{ year }} </p>
+<p> In {{year}}, {{highestSalesName}} made the most sales. It made ${{ highestSales }} billion dollars.
 {% endblock %}
