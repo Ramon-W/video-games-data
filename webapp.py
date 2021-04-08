@@ -30,5 +30,5 @@ def highest_sales(videoGames, year, version):
         profit = highestSold["Metrics"]["Sales"] * 1000000000
         return profits
     
-def highest_score():
+def highest_score(videoGames, year):
     return "hi"
