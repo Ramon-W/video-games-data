@@ -17,7 +17,7 @@ def render_popular():
         highestSalesName = highest_sales(videoGames, year, "title")
         highestSales = highest_sales(videoGames, year, "profit")
         highestScore = highest_score(videoGames, year)
-        return render_template('populardata.html', highestSalesName = "highestSalesName", highestSales = "highestSales", highestScore = "highestScore", year = year)
+        return render_template('populardata.html', highestSalesName = highestSalesName, highestSales = highestSales, highestScore = highestScore, year = year)
     return render_template('popular.html')
 
 def highest_sales(videoGames, year, version):
