@@ -14,23 +14,31 @@ def render_popular():
         videoGames = json.load(game_data)
     if 'year' in request.args:
         year = request.args['year']
-        highestSalesName = highest_sales(videoGames, year, "title")
-        highestSales = highest_sales(videoGames, year, "profit")
+        popularList = highest_sales(videoGames, year)
         highestScore = highest_score(videoGames, year)
-        return render_template('populardata.html', highestSalesName = highestSalesName, highestSales = highestSales, highestScore = highestScore, year = year)
+        return render_template('populardata.html', highestSalesName = popularList[0], highestSales = popularList[1], highestScore = highestScore, year = year)
     return render_template('popular.html')
 
-def highest_sales(videoGames, year, version):
+def highest_sales(videoGames, year):
+    popList = []
     highestSold = videoGames[0]
+    highestSoldTwo = videoGames[0]
+    highestSoldThree = videoGames[0]
     for game in videoGames:
-        if game["Release"]["Year"] == int(year) and game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
-            highestSold = game
-    if version == "title":
-        return highestSold["Title"]
-    else:
-        profits = highestSold["Metrics"]["Sales"]
-        return profits
-
+        if game["Release"]["Year"] == int(year)
+            if game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
+                highestSold = game
+            elif game["Metrics"]["Sales"] > highestSoldTwo["Metrics"]["Sales"]:
+                highestSoldTwo = game
+            elif game["Metrics"]["Sales"] > highestSoldThree["Metrics"]["Sales"]:
+                highestSoldThree = game
+    popList.append(highestSold["Title"])
+    popList.append(highestSold["Metrics"]["Sales"])
+    popList.append(highestSoldTwo["Title"])
+    popList.append(highestSoldTwo["Metrics"]["Sales"])
+    popList.append(highestSoldThree["Title"])
+    popList.append(highestSoldThree["Metrics"]["Sales"])
+    return popList
     
 def highest_score(videoGames, year):
     return "hi"
