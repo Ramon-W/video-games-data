@@ -15,10 +15,11 @@ def render_popular():
     if 'year' in request.args:
         year = request.args['year']
         popularList = highest_sales(videoGames, year)
-        highestScore = highest_score(videoGames, year)
+        scoreList = highest_score(videoGames, year)
         return render_template('populardata.html', highestSalesName = popularList[0], highestSales = popularList[1], highestSalesNameTwo = popularList[2], 
                                highestSalesTwo = popularList[3], highestSalesNameThree = popularList[4], highestSalesThree = popularList[5], 
-                               highestScore = highestScore, year = year)
+                               highestScoreName = scoreList[0], highestScore = scoreList[1], highestScoreNameTwo = scoreList[2], 
+                               highestScoreTwo = scoreList[3], highestScoreNameThree = scoreList[4], highestScore = scoreList[5], year = year)
     return render_template('popular.html')
 
 def highest_sales(videoGames, year):
