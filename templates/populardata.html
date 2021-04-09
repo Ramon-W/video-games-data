@@ -1,7 +1,13 @@
 {% extends "popular.html" %}
 {% block content %}
 {{ super() }}
-<p>In {{ year }}, {{ highestSalesName }} made the most sales. It made ${{ highestSales }} billion.</p>
-<p>{{ highestSalesNameTwo }} came below at ${{ highestSalesTwo }} billion made in sales.</p>
-<p>{{ highestSalesNameThree }} made ${{ highestSalesThree }} billion.</p>
+<h3>Most Popular Games by Sales in {{ year }}:</h3>
+<p>1. {{ highestSalesName }} made ${{ highestSales }} billion.</p>
+<p>2. {{ highestSalesNameTwo }}  ${{ highestSalesTwo }} billion made in sales.</p>
+<p>3. {{ highestSalesNameThree }} made ${{ highestSalesThree }} billion.</p>
+<br>
+<h3>Most Popular Games by Metacritic Rating in {{ year }}:</h3>
+<p>1. {{ highestRatingName }} got a score of {{ highestRating }}/100.</p>
+<p>2. {{ highestRatingNameTwo }} got a score of {{ highestRatingTwo }}/100</p>
+<p>3. {{ highestRatingNameThree }} got a score of {{ highestRatingThree }}/100.</p>
 {% endblock %}
