@@ -23,9 +23,9 @@ def render_popular():
 
 def highest_sales(videoGames, year):
     popList = []
-    highestSold = videoGames[0]
-    highestSoldTwo = videoGames[0]
-    highestSoldThree = videoGames[0]
+    highestSold = videoGames[1]
+    highestSoldTwo = videoGames[1]
+    highestSoldThree = videoGames[1]
     for game in videoGames:
         if game["Release"]["Year"] == int(year):
             if game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
