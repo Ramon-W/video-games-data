@@ -25,7 +25,7 @@ def highest_sales(videoGames, year):
     highestSoldTwo = videoGames[0]
     highestSoldThree = videoGames[0]
     for game in videoGames:
-        if game["Release"]["Year"] == int(year)
+        if game["Release"]["Year"] == int(year):
             if game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
                 highestSold = game
             elif game["Metrics"]["Sales"] > highestSoldTwo["Metrics"]["Sales"]:
