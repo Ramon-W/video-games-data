@@ -1,9 +1,7 @@
 {% extends "popular.html" %}
 {% block content %}
 {{ super() }}
-<pre>
-   In {{ year }}, {{ highestSalesName }} made the most sales. It made ${{ highestSales }} billion.
-   {{ highestSalesNameTwo }} came below at ${{ highestSalesTwo }} billion made in sales. 
-   {{ highestSalesNameThree }} made ${{ highestSalesThree }} billion.
-</pre>
+<p>In {{ year }}, {{ highestSalesName }} made the most sales. It made ${{ highestSales }} billion.</p>
+<p>{{ highestSalesNameTwo }} came below at ${{ highestSalesTwo }} billion made in sales.</p>
+<p>{{ highestSalesNameThree }} made ${{ highestSalesThree }} billion.</p>
 {% endblock %}
