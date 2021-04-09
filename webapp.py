@@ -44,7 +44,7 @@ def highest_sales(videoGames, year):
     return popList
     
 def highest_score(videoGames, year):
-    popList = []
+    ratingList = []
     highestRating = videoGames[3]
     highestRatingTwo = videoGames[3]
     highestRatingThree = videoGames[3]
@@ -56,10 +56,10 @@ def highest_score(videoGames, year):
                 highestRatingTwo = game
             elif game["Metrics"]["Review Score"] > highestRatingThree["Metrics"]["Review Score"]:
                 highestRatingThree = game
-    popList.append(highestRating["Title"])
-    popList.append(highestRating["Metrics"]["Review Score"])
-    popList.append(highestRatingTwo["Title"])
-    popList.append(highestRatingTwo["Metrics"]["Review Score"])
-    popList.append(highestRatingThree["Title"])
-    popList.append(highestRatingThree["Metrics"]["Review Score"])
-    return popList
+    ratingList.append(highestRating["Title"])
+    ratingList.append(highestRating["Metrics"]["Review Score"])
+    ratingList.append(highestRatingTwo["Title"])
+    ratingList.append(highestRatingTwo["Metrics"]["Review Score"])
+    ratingList.append(highestRatingThree["Title"])
+    ratingList.append(highestRatingThree["Metrics"]["Review Score"])
+    return ratingList
