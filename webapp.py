@@ -23,9 +23,9 @@ def render_popular():
 
 def highest_sales(videoGames, year):
     popList = []
-    highestSold = videoGames[1]
-    highestSoldTwo = videoGames[1]
-    highestSoldThree = videoGames[1]
+    highestSold = videoGames[3]
+    highestSoldTwo = videoGames[3]
+    highestSoldThree = videoGames[3]
     for game in videoGames:
         if game["Release"]["Year"] == int(year):
             if game["Metrics"]["Sales"] > highestSold["Metrics"]["Sales"]:
@@ -43,4 +43,22 @@ def highest_sales(videoGames, year):
     return popList
     
 def highest_score(videoGames, year):
-    return "hi"
+    popList = []
+    highestRating = videoGames[3]
+    highestRatingTwo = videoGames[3]
+    highestRatingThree = videoGames[3]
+    for game in videoGames:
+        if game["Release"]["Year"] == int(year):
+            if game["Metrics"]["Review Score"] > highestRating["Metrics"]["Review Score"]:
+                highestRating = game
+            elif game["Metrics"]["Review Score"] > highestRatingTwo["Metrics"]["Review Score"]:
+                highestRatingTwo = game
+            elif game["Metrics"]["Review Score"] > highestRatingThree["Metrics"]["Review Score"]:
+                highestRatingThree = game
+    popList.append(highestRating["Title"])
+    popList.append(highestRating["Metrics"]["Review Score"])
+    popList.append(highestRatingTwo["Title"])
+    popList.append(highestRatingTwo["Metrics"]["Review Score"])
+    popList.append(highestRatingThree["Title"])
+    popList.append(highestRatingThree["Metrics"]["Review Score"])
+    return popList
