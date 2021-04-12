@@ -22,6 +22,10 @@ def render_popular():
                                highestScoreTwo = scoreList[3], highestScoreNameThree = scoreList[4], highestScoreThree = scoreList[5], year = year)
     return render_template('popular.html')
 
+@app.route('/explore')
+def render_explore():
+    return render_template('explore.html')
+
 def highest_sales(videoGames, year):
     popList = []
     highestSold = videoGames[3]
