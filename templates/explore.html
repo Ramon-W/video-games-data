@@ -14,15 +14,15 @@
 {% block footer %}
 <script type="text/javascript">
 	$(document).ready(function(){
-		var data = (function() {
-			var data = null;
+		var json = (function() {
+			var json = null;
 			$.ajax({
 				'async': false,
 				'global': false,
 				'url': "/video_games.json",
 				'dataType': "json",
-				'success': function(dat) {
-					data = dat;
+				'success': function(data) {
+					json = data;
 				}
 			});
 			return json;
@@ -36,7 +36,7 @@
 			var regex = new RegExp(searchField, "i");
 			var output = '<div class="row">';
 			var count = 1;
-			$.each(data, function(key, val){
+			$.each(json, function(key, val){
 				if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
 					output += '<div class="col-md-6 well">';
 					output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
