@@ -14,7 +14,7 @@
 {% block footer %}
 <script type="text/javascript">
  	$(document).ready(function(){
- 		var json = {{ data|safe }};
+ 		var json = {{ data|tojson }};
  		$('#txt-search').keyup(function(){
  			var searchField = $(this).val();
  			if(searchField === '')  {
