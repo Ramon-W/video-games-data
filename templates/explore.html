@@ -14,7 +14,7 @@
 {% block footer %}
 <script type="text/javascript">
  	$(document).ready(function(){
- 		var json = {{ data|tojson }};
+ 		var json = ({{ data|tojson }});
  		$('#txt-search').keyup(function(){
  			var searchField = $(this).val();
  			if(searchField === '')  {
@@ -25,7 +25,7 @@
  			var output = '<div class="row">';
  			var count = 1;
  			$.each(json, function(key, val){
- 				if ((val.Title.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+ 				if (val.Title.search(regex) != -1) {
  					output += '<div class="col-md-6 well">';
  					output += '<div class="col-md-7">';
  				        output += '<h5>' + val.Title + '</h5>';
