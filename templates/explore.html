@@ -14,19 +14,7 @@
 {% block footer %}
 <script type="text/javascript">
 	$(document).ready(function(){
-		var json = (function() {
-			var json = null;
-			$.ajax({
-				'async': false,
-				'global': false,
-				'url': "/test.json",
-				'dataType': "json",
-				'success': function(data) {
-					json = data;
-				}
-			});
-			return json;
-		})();
+		var json = [{"Title": "Super Mario"}];
 		$('#txt-search').keyup(function(){
 			var searchField = $(this).val();
 			if(searchField === '')  {
@@ -37,12 +25,10 @@
 			var output = '<div class="row">';
 			var count = 1;
 			$.each(json, function(key, val){
-				if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+				if ((val.Title.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
 					output += '<div class="col-md-6 well">';
-					output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
 					output += '<div class="col-md-7">';
-				        output += '<h5>' + val.employee_name + '</h5>';
-				  	output += '<p>' + val.employee_salary + '</p>'
+				        output += '<h5>' + val.Title + '</h5>';
 				  	output += '</div>';
 				  	output += '</div>';
 				  	if(count%2 == 0){
