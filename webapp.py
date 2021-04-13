@@ -24,7 +24,9 @@ def render_popular():
 
 @app.route('/explore')
 def render_explore():
-    return render_template('explore.html')
+    with open('video_games.json') as game_data:
+        videoGames = json.load(game_data)
+    return render_template('explore.html', data=json.dumps(videoGames))
 
 def highest_sales(videoGames, year):
     popList = []
