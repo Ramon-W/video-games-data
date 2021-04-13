@@ -1,5 +1,5 @@
 $(document).ready(function(){
-		var json = [{"Title": "Super Mario"}];
+	var json = [{"Title": "Super Mario"}];
 		$('#txt-search').keyup(function(){
 			var searchField = $(this).val();
 			if(searchField === '')  {
