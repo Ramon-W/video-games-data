@@ -28,6 +28,10 @@ def render_explore():
         videoGames = json.load(game_data)
     return render_template('explore.html', data=json.dumps(videoGames))
 
+@app.route('/graph')
+def render_graph():
+    return render_template('graph.html')
+
 def highest_sales(videoGames, year):
     popList = []
     highestSold = videoGames[3]
