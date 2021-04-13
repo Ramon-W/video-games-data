@@ -25,4 +25,4 @@ $(document).ready(function(){
 			output += '</div>';
 			$('#filter-records').html(output);
 		});
-	});
+});
