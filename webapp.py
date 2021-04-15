@@ -30,7 +30,9 @@ def render_explore():
 
 @app.route('/graph')
 def render_graph():
-    return render_template('graph.html')
+    with open('video_games.json') as game_data:
+        videoGames = json.load(game_data)
+    return render_template('graph.html', points = get_points(videoGames))
 
 def highest_sales(videoGames, year):
     popList = []
@@ -73,3 +75,9 @@ def highest_score(videoGames, year):
     ratingList.append(highestRatingThree["Title"])
     ratingList.append(highestRatingThree["Metrics"]["Review Score"])
     return ratingList
+
+def get_points(videoGames):
+    points = ""
+    for game in videoGames:
+        points += Markup("{ x: " + game["Metrics"]["Used Price"] + ", y: " + game["Length"]["All PlayStyles"]["Average"] + " },")
+    return points
