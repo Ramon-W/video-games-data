@@ -20,14 +20,9 @@ window.onload = function () {
 		data: [{
 			type: "scatter",
 			toolTipContent: "<b>Price: </b>{x} $<br/><b>Playtime: </b>{y} hrs",
-			dataPoints: [
-				{ x: 3, y: 10 },
-				{ x: 4, y: 14 },
-				{ x: 10, y: 60 },
-				{ x: 25, y: 199 },
-		]
-	}]
-});
+			dataPoints: [{{ points }}]
+		}]
+	});
 chart.render();
 }
 </script>
