@@ -80,7 +80,7 @@ def get_points(videoGames):
     points = ""
     count = 1
     for game in videoGames:
-        points += Markup("{ x: " + game["Metrics"]["Used Price"] + ", y: " + game["Length"]["All PlayStyles"]["Average"] + " }")
+        points += Markup("{ x: " + str(game["Metrics"]["Used Price"]) + ", y: " + str(game["Length"]["All PlayStyles"]["Average"]) + " }")
         if count != len(videoGames):
             points += ", "
         count += 1
