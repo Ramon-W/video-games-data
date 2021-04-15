@@ -78,6 +78,10 @@ def highest_score(videoGames, year):
 
 def get_points(videoGames):
     points = ""
+    count = 1
     for game in videoGames:
-        points += Markup("{ x: " + game["Metrics"]["Used Price"] + ", y: " + game["Length"]["All PlayStyles"]["Average"] + " },")
+        points += Markup("{ x: " + game["Metrics"]["Used Price"] + ", y: " + game["Length"]["All PlayStyles"]["Average"] + " }")
+        if count != len(videoGames):
+            points += ", "
+        count += 1
     return points
