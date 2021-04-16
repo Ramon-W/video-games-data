@@ -6,6 +6,11 @@ body {
   margin: 20px;
 }
 
+.searchbar {
+  width: 50%;
+  margin: 20px;
+}
+
 .navbar-default {
   background-color: #a700a2;
   border-color: #ce17ee;
