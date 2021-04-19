@@ -6,14 +6,16 @@
   <h1>About:</h1>
   <p>
     This webapp contains video game data from <a href="https://corgis-edu.github.io/corgis/json/video_games/">The CORGIS Data Set Project</a>, containing 
-    1212 titles from the year 2004 to 2008. It includes the general information about each video game like its publisher, sales, and review scores.<br><br>
+    1212 titles from the year 2004 to 2008. It includes general information about each video game, such as its publisher, sales, and review scores.
+    The <a href="https://www.xbox.com/en-US/games/gameratings">ESRB</a> ratings that are used are E(veryone), T(eens), and M(ature). Review scores are 
+    from <a href="https://www.metacritic.com">Metacritic</a>.<br><br>
   
-    One set of statistics for each video game is the playtime, crowdsourced from <a href="https://howlongtobeat.com">HowLongToBeat.com</a>. This includes the average 
-    length (in hours) of all playstyles, as well as their averages. If a playstyle for a game does not exist (e.g. completionists), then it is denoted as 0.
-    Additionally, if the game does not have a specific end or there is no sufficient data, it would also be denoted as 0.<br><br>
+    Playtime statistics are crowdsourced from <a href="https://howlongtobeat.com">HowLongToBeat.com</a>. This includes the average 
+    length (in hours) of all playstyles, as well the the overall average. If a playstyle for a game does not exist (e.g. completionists) or if there
+    was no sufficient data, then it is denoted as 0.<br><br>
     
-    Publisher may be left blank if the publisher of the video game is unknown. Ratings are from <a href="https://www.xbox.com/en-US/games/gameratings">ESRB</a>,
-    but only includes E, T, and M. The review scores (out of 100) are from <a href="https://www.metacritic.com">Metacritic</a>.
+    The publisher of a game may be empty if the publisher is unkown. Special characters are omitted from the titles. There are a few errors with the dataset, such 
+    as having two copies of the same game.
   </p>
 </div>
 {% endblock %}
